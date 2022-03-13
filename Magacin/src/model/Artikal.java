@@ -12,25 +12,37 @@ public abstract class Artikal {
 	public String getNaziv() {
 		return naziv;
 	}
-	public void setNaziv(String naziv) {
+	public void setNaziv(String naziv) throws Exception {
+		if (naziv==null || naziv.isEmpty()) {
+			throw new Exception("Naziv artikla ne moze biti prazan!");
+		}
 		this.naziv = naziv;
 	}
 	public int getSifra() {
 		return sifra;
 	}
-	public void setSifra(int sifra) {
+	public void setSifra(int sifra) throws Exception {
+		if (sifra<0) {
+			throw new Exception("Sifra mora biti veca od nule!");
+		}
 		this.sifra = sifra;
 	}
 	public String getOpis() {
 		return opis;
 	}
-	public void setOpis(String opis) {
+	public void setOpis(String opis) throws Exception {
+		if (naziv==null || naziv.isEmpty()) {
+			throw new Exception("Opis ne moze biti prazan!");
+		}
 		this.opis = opis;
 	}
 	public int getKolicina() {
 		return kolicina;
 	}
-	public void setKolicina(int kolicina) {
+	public void setKolicina(int kolicina) throws Exception {
+		if (kolicina<0) {
+			throw new Exception("Kolicina mora biti veca od nule!");
+		}
 		this.kolicina = kolicina;
 	}
 	@Override
