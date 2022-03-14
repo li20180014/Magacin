@@ -13,15 +13,15 @@ public class Magacin implements MagacinInterfejs {
 	@Override
 	public void dodajArtikal(Artikal artikal) {
 		// TODO Auto-generated method stub
-		artikli.add(artikal);
-
+		if (artikal!=null) {
+			artikli.add(artikal);	
+		}
 	}
 
 	@Override
 	public void izbaciArtikal(Artikal artikal) {
 		// TODO Auto-generated method stub
-		artikli.remove(artikal);
-
+		artikli.remove(artikal);	
 	}
 
 	@Override
